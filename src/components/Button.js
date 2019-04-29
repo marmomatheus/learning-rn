@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import { StringDecoder } from 'string_decoder';
 
-const styes = StyleSheet.create({
+const styles = StyleSheet.create({
     button: {
         fontSize: 40,
         height: Dimensions.get('window').width / 4,
@@ -20,7 +20,7 @@ const styes = StyleSheet.create({
     },
     operationButton: {
         color: '#fff',
-        backgroundColor: '#fa8231'
+        backgroundColor: '#fa8231 '
     },
     buttonDouble: {
         width: (Dimensions.get('window').width / 4) * 2,
@@ -34,10 +34,10 @@ export default props => {
     const stylesButton = [styles.button]
     if (props.double) stylesButton.push(styles.buttonDouble)
     if (props.triple) stylesButton.push(styles.buttonTriple)
-    if (props.operation) stylesButton.push(styes.operationButton)
+    if (props.operation) stylesButton.push(styles.operationButton)
     return (
-        <TouchableHighlight onPress={props.onClick}>
-            <Text style={styles.button}>{props.label}</Text>
+        <TouchableHighlight onPress={() => props.onClick(props.label)}>
+            <Text style={stylesButton}>{props.label}</Text>
         </TouchableHighlight>
     )
 }
