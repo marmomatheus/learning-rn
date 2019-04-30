@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     operationButton: {
         color: '#fff',
-        backgroundColor: '#fa8231 '
+        backgroundColor: '#fa8231'
     },
     buttonDouble: {
         width: (Dimensions.get('window').width / 4) * 2,

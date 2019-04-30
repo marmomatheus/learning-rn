@@ -42,7 +42,9 @@ export default class App extends React.Component {
       const equals = operation = '='
       const values = [...this.state.values]
       try {
-        values[0] = eval(`${values[0]} ${this.state.operation} ${values[1]}`)
+        values[0] = eval(`${values[0]} ${this.state.operation} ${values[1]}`)
+      } catch {
+        return 0;
       }
     }
   }
